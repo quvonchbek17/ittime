@@ -18,7 +18,7 @@ module.exports = {
         await model.verifyEmail(email, number);
         res.json({
             status: 200,
-            message: "Emailga tasdiqlovchi xabar yuborildi ",
+            message: "Emailga tasdiqlash kodi yuborildi ",
         });
 
         } catch (err) {
