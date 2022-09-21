@@ -1,8 +1,15 @@
 const express = require('express')
+const dotenv = require('dotenv')
 const app = express()
+const router = require('./modules')
+const cors = require('cors')
 
 
-app.use('/*', (req, res) => res.send("Yaxshi"))
-const port =  8080
+dotenv.config()
+app.use(express.json())
+app.use(cors())
+app.use(router)
+app.use('/*', (req, res) => res.sendStatus(404))
 
-app.listen(port)
+
+app.listen(process.env.PORT)
