@@ -3,9 +3,9 @@ const router = express.Router();
 const users = require('./users/users.js')
 const forget = require('./forgetpassword/forget.js')
 router
-  .post("/users", users.Post)
-  .post("/forgetpassword", forget.PostEmail)
-  .post("/resetpassword", forget.PostNumber)
+  .post("/register", users.Post)
+  .post("/checkemail", forget.PostEmail)
+  .post("/verificationcode", forget.PostNumber)
   .put("/newpassword", users.Update)
 
 
