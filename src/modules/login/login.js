@@ -15,7 +15,7 @@ module.exports = {
         });
       } else {
         res.json({
-          status: 500,
+          status: 404,
           token: null,
         });
       }
