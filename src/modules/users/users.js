@@ -24,11 +24,10 @@ module.exports = {
       } else {
         res.json({
           status: 400,
-          message: "Bu ma'lumotlar avval kiritilgan, iltimos boshqa username, email yoki telefon raqami kiriting",
+          message: "Bu ma'lumotlar avval kiritilgan, iltimos boshqa username yoki email kiriting",
         });
       }
     } catch (err) {
-      console.log(err);
       res.sendStatus(500);
     }
   },
