@@ -23,11 +23,12 @@ module.exports = {
         });
       } else {
         res.json({
-          status: 500,
-          message: "Foydalanuvchi qo'shilmadi",
+          status: 400,
+          message: "Bu ma'lumotlar avval kiritilgan, iltimos boshqa username, email yoki telefon raqami kiriting",
         });
       }
     } catch (err) {
+      console.log(err);
       res.sendStatus(500);
     }
   },

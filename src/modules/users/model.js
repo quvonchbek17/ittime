@@ -14,11 +14,9 @@ const UPDATE_PASSWORD = `
 
 const postUser = async (username,fullname,email,password,phone) => {
     const created = await fetchData(
-      `Select * from users where user_name = $1 and user_fullname = $2 and user_email = $3 and user_password = $4 and user_phone = $5`,
+      `Select * from users where user_name = $1 or user_email = $2 or user_phone = $3`,
       username,
-      fullname,
       email,
-      password,
       phone
     );
     if (created.length > 0) {
